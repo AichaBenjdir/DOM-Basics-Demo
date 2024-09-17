@@ -7,28 +7,22 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <!-- DOM Elements -->
+  <!-- DOM Méthods -->
   <header>
     <h1 id="header-demo"></h1>
   </header>
 
-
-
-  <!-- DOM Méthods -->
-  <section id="demo-section" class="section">
+  <!-- DOM Elements -->
+  <section id="demo-section-elements" class="section">
     <h2>DOM Méthods</h2>
     <p>Le DOM (Document Object Model) est une interface qui permet 
         de manipuler la structure, le style, et le contenu des documents web de manière dynamique.</p>
-    <p>Le DOM représente une page web sous la forme
-         d'un arbre d'éléments, chaque balise HTML étant un nœud de cet arbre.</p>
+    <p>Le DOM représente une page web sous la forme d'un arbre d'éléments, chaque balise HTML étant un nœud de cet arbre.</p>
     <div id="demo-result"></div>
   </section>
 
-
-
   <!-- DOM Forms -->
-<section id="form-section" class="section">
+  <section id="form-section" class="section">
     <h2>DOM Forms</h2>
     <label for="name">Nom:</label>
     <input type="text" id="name" placeholder="Entrez votre nom">
@@ -36,9 +30,8 @@
     <p id="form-result"></p>
   </section>
 
-  
   <!-- DOM Animations -->
-<section id="animation-section" class="section">
+  <section id="animation-section" class="section">
     <h2>DOM Animations</h2>
     <div class="animation-wrapper">
       <div class="animation-item">
@@ -53,29 +46,44 @@
       </div>
     </div>
   </section>
-  
 
-
-  <!-- DOM Events  -->
+  <!-- DOM Events -->
   <section id="event-section" class="section">
     <h2>DOM Events</h2>
-  <button id="trigger-event-btn" class="btn">Déclencher l'Événement</button>
-  <p id="event-result">Appuyez sur le bouton pour voir le résultat ici.</p>
-</section>
-
-
-
-
-  <!-- DOM Navigation  -->
-  <section id="navigation-section" class="section">
-    <h2>DOM Navigation </h2>
-    <ul id="list" class="list" role="list">
-      <li>Élément 1</li>
-      <li>Élément 2</li>
-      <li>Élément 3</li>
-    </ul>
-    <button onclick="myFunction()" class="btn">Mettre en surbrillance le dernier élément</button>
+    <button id="trigger-event-btn" class="btn">Déclencher l'Événement</button>
+    <p id="event-result">Appuyez sur le bouton pour voir le résultat ici.</p>
   </section>
+
+  <!-- DOM Navigation -->
+  <section id="navigation-section" class="section">
+    <h2>DOM Navigation</h2>
+    <h4 id="source">Les Secrets de la Réussite </h1>
+  <p id="destinationParagraph">Le chemin vers la réussite est pavé de défis,
+     mais chaque obstacle est une opportunité déguisée. En persévérant avec passion et détermination, vous pouvez transformer les difficultés en tremplins pour atteindre vos objectifs les plus ambitieux.
+     N'oubliez jamais que chaque pas en avant, même petit, vous rapproche de vos rêves.      </p>
+    <!-- <button onclick="highlightLastItem()" class="btn">Mettre en surbrillance le dernier élément</button> -->
+  </section>
+
+  <!-- DOM Nodes, DOM Collections and DOM Node Lists -->
+  <section id="demo-section-nodes" class="section">
+    <h2>DOM Nodes and DOM Collections</h2>
+    <div id="div1">
+        <p id="p1">Le début mène au succès.</p>
+        <p id="p2">Deviens meilleur chaque jour.</p>
+        <p id="demo1"></p>
+      
+    </div>
+
+    <!-- Boutons pour chaque fonction -->
+    <button id="addParaBtn">Ajouter</button>
+    <button id="insertParaBtn">Insérer</button>
+    <button id="removeParaBtn">Supprimer</button>
+    <button id="replaceParaBtn">Remplacer</button>
+    <button onclick="myMod()">Try it</button>
+  </section>
+
+  <!-- DOM HTML -->
+  <p id="ft"></p>
 
   <footer>
     <p>&copy; 2024 Démo DOM</p>

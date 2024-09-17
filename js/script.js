@@ -1,8 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+  //  DOM Méthods 
     document.getElementById("header-demo").innerHTML = "Démo Manipulation DOM!";
+
+    // DOM CSS
+    document.getElementById("header-demo").style.color = "blue";
+    document.getElementById("header-demo").style.fontFamily = "Arial";
+    document.getElementById("header-demo").style.fontSize = "30px";
+
+    
   
    
+    // DOM Elements
     const paragraphs = document.querySelectorAll('#demo-section p');
 
     if (paragraphs.length > 0) {
@@ -20,9 +29,14 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('trigger-event-btn').addEventListener('click', function() {
         const result = document.getElementById('event-result');
         result.textContent = 'Événement déclenché avec succès !';
+        
+       
       });
-      
-     
+  
+  // DOM Event Listener
+    document.getElementById('trigger-event-btn').addEventListener('click', function() {
+     alert("Bonjour, vous avez déclenché une alerte supplémentaire !");
+      });
       });
 
 
@@ -38,6 +52,7 @@ function myFunction() {
       text = `Bonjour, ${name} !`;
     }
     document.getElementById('form-result').textContent = text;
+  
   }
 
 
@@ -65,10 +80,88 @@ function myFunction() {
     }
   }
 
-  function myFunction() {
-    const list = document.getElementById('list');
-    const lastItem = list.lastElementChild;
-    if (lastItem) {
-      lastItem.classList.add('highlight');
-    }
+  //  DOM Navigation 
+  
+  document.getElementById("source").innerHTML = document.getElementById("destinationParagraph").innerHTML;
+  // function highlightLastItem() {
+  //   const list = document.getElementById('list');
+  //   const lastItem = list.lastElementChild;
+  //   if (lastItem) {
+  //     lastItem.classList.add('highlight');
+  //   }
+  //   // document.getElementById("element-2").remove();
+    
+  // }
+
+  //  DOM HTML 
+  document.getElementById("ft").innerHTML = "Date : " + Date();
+
+
+  
+  // DOM Nodes
+
+// 1. Ajouter un paragraphe à la fin du conteneur 'div1'
+const addParaBtn = document.getElementById("addParaBtn");
+addParaBtn.addEventListener("click", function() {
+    const element = document.getElementById("div1");
+    const para = document.createElement("p");
+    const node = document.createTextNode("Commence et n'abandonne jamais.");
+    para.appendChild(node);
+    element.appendChild(para);
+  
+});
+
+// 2. Insérer un nouveau paragraphe avant le paragraphe P1
+const insertParaBtn = document.getElementById("insertParaBtn");
+insertParaBtn.addEventListener("click", function() {
+    const element = document.getElementById("div1");
+    
+    // Vérifiez si le paragraphe existe déjà pour éviter les doublons
+    const existingPara = document.getElementById("insertedPara");
+   
+
+    const para = document.createElement("p");
+    para.id = "insertedPara"; // Assigner un identifiant unique au paragraphe
+    const node = document.createTextNode("Agis maintenant, réussis demain.");
+    para.appendChild(node);
+    const child = document.getElementById("p2");
+    element.insertBefore(para, child);
+        
+});
+
+// 3. Supprimer le paragraphe P1
+const removeParaBtn = document.getElementById("removeParaBtn");
+removeParaBtn.addEventListener("click", function() {
+    const p1 = document.getElementById("p1");
+    p1.remove();
+   
+});
+
+// 4. Remplacer le paragraphe P2
+const replaceParaBtn = document.getElementById("replaceParaBtn");
+replaceParaBtn.addEventListener("click", function() {
+    const element = document.getElementById("div1");
+    const newPara = document.createElement("p");
+    const newText = document.createTextNode("Progresser, c'est réussir.");
+    newPara.appendChild(newText);
+    const oldChild = document.getElementById("p2");
+   element.replaceChild(newPara, oldChild);
+       
+});
+
+
+//  DOM Collections
+function myMod() {
+  const section = document.getElementById("demo-section-nodes");
+  
+  if (section) {
+      const paragraphs = section.getElementsByTagName("p");
+      for (let i = 0; i < paragraphs.length; i++) {
+          paragraphs[i].style.color = "red";
+      }
   }
+//  DOM Node Lists
+  const myNodelist = document.querySelectorAll("#demo-section-nodes p");
+  document.querySelector("#demo-section-nodes #demo1").innerHTML = "Ce document contient " + myNodelist.length + " paragraphs.";
+    
+}
