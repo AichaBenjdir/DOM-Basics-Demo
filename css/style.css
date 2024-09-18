@@ -33,7 +33,7 @@
     color: var(--text-color);
     padding: 20px;
     text-align: center;
-    z-index: 1000; /* Assure que l'en-tête reste au-dessus des autres éléments */
+    z-index: 1000; 
   }
   
   .section {
@@ -57,13 +57,13 @@
   
   
 /* Style pour les animations */
-.animation-wrapper {
+.wrapper {
     display: flex;
     justify-content: space-around; 
     gap: 40px;
   }
   
-  .animation-item {
+  .wrapper-item {
     display: flex;
     flex-direction: column;
     align-items: center;

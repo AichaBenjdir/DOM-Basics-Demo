@@ -25,20 +25,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   
-    // DOM Events
-    document.getElementById('trigger-event-btn').addEventListener('click', function() {
-        const result = document.getElementById('event-result');
-        result.textContent = 'Événement déclenché avec succès !';
-        
-       
-      });
   
-  // DOM Event Listener
-    document.getElementById('trigger-event-btn').addEventListener('click', function() {
-     alert("Bonjour, vous avez déclenché une alerte supplémentaire !");
-      });
       });
 
+
+
+
+    // DOM Events
+ 
+    function changeText(id) {
+      id.innerHTML = "Réalisez vos rêves !";
+    }
+
+// DOM Event Listerner
+
+    var x = document.getElementById("myBtn");
+x.addEventListener("mouseover", myMoFunction);
+x.addEventListener("click", mySecondFunction);
+x.addEventListener("mouseout", myThirdFunction);
+
+function myMoFunction() {
+  document.getElementById("demo").innerHTML += "Le succès est proche !<br>";
+}
+
+function mySecondFunction() {
+  document.getElementById("demo").innerHTML += "Agissez avec détermination !<br>";
+}
+
+function myThirdFunction() {
+  document.getElementById("demo").innerHTML += "Continuez à avancer !<br>";
+}
 
 
 
@@ -121,7 +137,7 @@ insertParaBtn.addEventListener("click", function() {
    
 
     const para = document.createElement("p");
-    para.id = "insertedPara"; // Assigner un identifiant unique au paragraphe
+    para.id = "insertedPara"; 
     const node = document.createTextNode("Agis maintenant, réussis demain.");
     para.appendChild(node);
     const child = document.getElementById("p2");

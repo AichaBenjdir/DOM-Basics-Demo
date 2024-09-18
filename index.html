@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- DOM Méthods -->
+  <!-- DOM Méthods and DOM CSS -->
   <header>
     <h1 id="header-demo"></h1>
   </header>
@@ -33,13 +33,13 @@
   <!-- DOM Animations -->
   <section id="animation-section" class="section">
     <h2>DOM Animations</h2>
-    <div class="animation-wrapper">
-      <div class="animation-item">
-        <button id="animate-btn" class="btn">Animer le Bloc</button>
+    <div class="wrapper">
+      <div class="wrapper-item">
+        <button id="animate-btn" class="btn">Cliquez ici</button>
         <div id="box" aria-hidden="true"></div>
       </div>
-      <div class="animation-item">
-        <p><button class="btn" onclick="myMove()">Click Me</button></p>
+      <div class="wrapper-item">
+        <p><button class="btn" onclick="myMove()">Cliquez ici</button></p>
         <div id="container">
           <div id="animate"></div>
         </div>
@@ -47,11 +47,22 @@
     </div>
   </section>
 
-  <!-- DOM Events -->
+  <!-- DOM Events and DOM Event Listener -->
   <section id="event-section" class="section">
-    <h2>DOM Events</h2>
-    <button id="trigger-event-btn" class="btn">Déclencher l'Événement</button>
-    <p id="event-result">Appuyez sur le bouton pour voir le résultat ici.</p>
+    <h2>DOM Events and DOM Event Listener</h2>
+    <div class="wrapper">
+      <div class="wrapper-item">
+      
+      <h4 id="clickableText" onclick="changeText(this)">Vers un avenir radieux </h2>
+    </div>
+    
+    <div class="wrapper-item">
+      
+      <button id="myBtn">Essayez-le</button>
+      <p id="demo"></p>
+    </div>
+  </div>
+  
   </section>
 
   <!-- DOM Navigation -->
