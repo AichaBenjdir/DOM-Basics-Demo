@@ -162,6 +162,7 @@ function myMod() {
   }
 
 }
+
 //  DOM Node Lists
 
 const allParagraphs = document.querySelectorAll("#demo-section-nodes-lists p");
