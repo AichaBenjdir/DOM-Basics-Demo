@@ -160,8 +160,10 @@ function myMod() {
           paragraphs[i].style.color = "red";
       }
   }
-//  DOM Node Lists
-  const myNodelist = document.querySelectorAll("#demo-section-nodes p");
-  document.querySelector("#demo-section-nodes #demo1").innerHTML = "Ce document contient " + myNodelist.length + " paragraphs.";
-    
+
 }
+//  DOM Node Lists
+
+const allParagraphs = document.querySelectorAll("#demo-section-nodes-lists p");
+
+document.getElementById("demo1").innerHTML = "Ce document contient " + allParagraphs.length + " paragraphes.";
