@@ -11,15 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
   
    
-    // DOM Elements
-    const paragraphs = document.querySelectorAll('#demo-section p');
-
-    if (paragraphs.length > 0) {
-        document.getElementById('demo-result').innerHTML = 'Le premier paragraphe explique que le DOM permet la manipulation des éléments de la page web : ' + paragraphs[0].innerHTML;
-      } else {
-        document.getElementById('demo-result').innerHTML = 'Il semble que les paragraphes sur le DOM ne sont pas disponibles.';
-      }
-
+    
 
 
 
@@ -29,13 +21,30 @@ document.addEventListener('DOMContentLoaded', function() {
       });
 
 
-
+// DOM Elements
+    function checkAnswer(answer) {
+      const correctAnswer = "raisin"; 
+      const resultElement = document.getElementById("demo-result");
+    
+      if (answer === correctAnswer) {
+        resultElement.innerHTML = "Bravo ! Vous avez trouvé la bonne réponse.";
+      } else {
+        resultElement.innerHTML = "Désolé, ce n'est pas la bonne réponse. Essayez encore !";
+      }
+    }
 
     // DOM Events
  
-    function changeText(id) {
-      id.innerHTML = "Réalisez vos rêves !";
-    }
+    // function changeText(id) {
+    //   id.innerHTML = "Réalisez vos rêves !";
+    // }
+// Fonction pour changer l'image
+function changeImage(id) {
+  id.src = "images/image2.jpg"; 
+}
+
+
+
 
 // DOM Event Listerner
 
@@ -98,7 +107,7 @@ function myFunction() {
 
   //  DOM Navigation 
   
-  document.getElementById("source").innerHTML = document.getElementById("destinationParagraph").innerHTML;
+  document.getElementById("destinationParagraph").innerHTML = document.getElementById("source").nodeName;
   // function highlightLastItem() {
   //   const list = document.getElementById('list');
   //   const lastItem = list.lastElementChild;

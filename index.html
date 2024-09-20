@@ -15,9 +15,15 @@
   <!-- DOM Elements -->
   <section id="demo-section-elements" class="section">
     <h2>DOM Elements</h2>
-    <p>Le DOM (Document Object Model) est une interface qui permet 
-        de manipuler la structure, le style, et le contenu des documents web de manière dynamique.</p>
-    <p>Le DOM représente une page web sous la forme d'un arbre d'éléments, chaque balise HTML étant un nœud de cet arbre.</p>
+    <h2>Quel fruit d'automne est-ce ?</h2>
+<p id="question">Cliquez sur l'image pour répondre :</p>
+
+<div class="quiz-container">
+  <img src="images/peaches.jpg" alt="Pêches" onclick="checkAnswer('pêches')">
+  <img src="images/fraise.jpg" alt="Fraise" onclick="checkAnswer('fraise')">
+  <img src="images/grape.jpg" alt="Raisin" onclick="checkAnswer('raisin')">
+  <img src="images/kiwi.jpg" alt="Kiwi" onclick="checkAnswer('kiwi')">
+</div>
     <div id="demo-result"></div>
   </section>
 
@@ -52,8 +58,10 @@
     <h2>DOM Events and DOM Event Listener</h2>
     <div class="wrapper">
       <div class="wrapper-item">
-      
-      <h4 id="clickableText" onclick="changeText(this)">Vers un avenir radieux </h2>
+<!--       
+      <h4 id="clickableText" onclick="changeText(this)">Vers un avenir radieux </h4> -->
+      <h4>Cliquez sur l'image pour changer</h4>
+      <img id="clickableImage" src="images/image1.jpg" alt="Vers un avenir radieux" onclick="changeImage(this)">
     </div>
     
     <div class="wrapper-item">
@@ -68,10 +76,8 @@
   <!-- DOM Navigation -->
   <section id="navigation-section" class="section">
     <h2>DOM Navigation</h2>
-    <h4 id="source">Les Secrets de la Réussite </h1>
-  <p id="destinationParagraph">Le chemin vers la réussite est pavé de défis,
-     mais chaque obstacle est une opportunité déguisée. En persévérant avec passion et détermination, vous pouvez transformer les difficultés en tremplins pour atteindre vos objectifs les plus ambitieux.
-     N'oubliez jamais que chaque pas en avant, même petit, vous rapproche de vos rêves.      </p>
+    <h4 id="source">Simplicité mène à l'efficacité. </h1>
+  <p id="destinationParagraph">Grandir ensemble avec technologie.</p>
     <!-- <button onclick="highlightLastItem()" class="btn">Mettre en surbrillance le dernier élément</button> -->
   </section>
 

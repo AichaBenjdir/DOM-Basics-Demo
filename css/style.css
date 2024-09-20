@@ -51,10 +51,27 @@
   }
   
   h2 {
-    margin-bottom: 10px;
+    margin-bottom: 18px;
     color: var(--primary-color);
+    
   }
-  
+
+  .quiz-container {
+    margin: 20px;
+    text-align: center;
+  }
+  img {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+    margin: 10px;
+  }
+  #demo-result{
+    text-align: center;
+  }
+  #name{
+    padding: 12px;
+  }
   
 /* Style pour les animations */
 .wrapper {
@@ -102,13 +119,16 @@
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    background-color: #007BFF;
-    color: white;
+    background-color: #0f68c7;
+    color: white; 
   }
   .btn:hover, button:hover {
-    background-color: #0056b3;
+    background-color: var(--highlight-color);
   }
   
+  #demo{
+   margin-left: 56px;
+  }
   
   .hide {
     display: none;
